@@ -35,7 +35,7 @@ export async function POST(request: Request) {
         auth:{
             user:process.env.USER_MAIL,
             pass:process.env.USER_PASSWORD
-        }ç
+        }
     })
 
     try{
