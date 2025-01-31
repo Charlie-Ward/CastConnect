@@ -1,6 +1,6 @@
 import prisma from "@/app/prismadb"
 import { NextResponse } from "next/server"
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 import { randomUUID } from "crypto"
 import { z } from "zod"
 import { SignUpSchema } from "@/ZodSchema/UserSchema"
@@ -46,8 +46,7 @@ export async function POST(request: Request) {
                 password:hashedPassword
             }
         })
-
-        return NextResponse.json(User)
+        return NextResponse.json({message: "User created successfully", User})
     } catch (error) {
         return NextResponse.json({errorMessage: "Error creating user", error})
     }
