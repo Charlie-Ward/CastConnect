@@ -53,12 +53,10 @@ A web application built with Next.js that connects actors and casting directors.
 Make sure to set up the following environment variables in your `.env` file:
 
 - `DATABASE_URL`: Your database connection string
-- `NEXT_PUBLIC_API_URL`: Your API URL
-- Add any other required environment variables
 
 ## Contributing
 
-This is an A-Level Computer Science project. Contributions, issues, and feature requests are welcome!
+This is an A-Level Computer Science project. Contributions cannot be accepted however issues and feature requests are welcome!
 
 ## License
 
