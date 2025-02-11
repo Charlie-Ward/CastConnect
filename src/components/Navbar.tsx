@@ -29,7 +29,6 @@ const Navbar = (props: Props) => {
                 <div className='hidden md:block w-3/4'>
                     <Input type='text' placeholder='Search' className='w-full' />
                 </div>
-
                 {/* Desktop Navigation */}
                 <div className='hidden md:flex items-center gap-4'>
                     <DropdownMenu>
@@ -44,7 +43,6 @@ const Navbar = (props: Props) => {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button variant="outline" size="icon">
