@@ -28,7 +28,7 @@ export async function POST(request: Request) {
         })
     }
 
-    const hashedPassword = await bcrypt.hash(body.password, 14)
+    const hashedPassword = await bcrypt.hash(body.password, 14) // Was 10 update to be more secure
 
     var transport = nodemailer.createTransport({
         service: 'gmail',

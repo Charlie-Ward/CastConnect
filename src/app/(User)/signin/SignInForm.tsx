@@ -48,7 +48,7 @@ const SignInForm = (props: Props) => {
     return (
         <div className='mt-4 max-w-[1280px] mx-auto'>
             <Card className='p-5 max-w-[600px] mx-auto'>
-                <CardHeader className='text-2xl font-semibold text-center'>Register</CardHeader>
+                <CardHeader className='text-2xl font-semibold text-center'>Sign In</CardHeader>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
                         <FormField

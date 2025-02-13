@@ -41,6 +41,9 @@ const Navbar = (props: Props) => {
                             <DropdownMenuItem>
                                 <Link href='/signup'>Sign Up</Link>
                             </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href='/signin'>Sign In</Link>
+                            </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
                     <DropdownMenu>
@@ -81,6 +84,9 @@ const Navbar = (props: Props) => {
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                                 <Link href='/signup' className="w-full">Sign Up</Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <Link href='/signin' className='w-full'>Sign In</Link>
                             </DropdownMenuItem>
                             <DropdownMenuSub>
                                 <DropdownMenuSubTrigger>Theme</DropdownMenuSubTrigger>
