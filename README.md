@@ -1,3 +1,7 @@
+<!-- README.md -->
+<!-- Copyright (C) 2025 Charlie Ward GPL v3 -->
+<!-- Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE -->
+
 # Casting Call Platform
 
 A web application built with Next.js that connects actors and casting directors. This platform allows casting directors to post casting calls and actors to submit auditions, streamlining the casting process.

@@ -1,5 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+//schema.prisma
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
 generator client {
   provider = "prisma-client-js"
