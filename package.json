@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf .next build",
-    "dev": "prisma generate && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",
