@@ -94,7 +94,7 @@ const SignInForm = (props: Props) => {
                         <Button type="submit">Sign In</Button>
                     </form>
                 </Form>
-                <p className='text-m text-center'>Don't have an account <Link href="/signup" className='text-decoration: underline text-blue-500'>Sign Up</Link></p>
+                <p className='text-m text-center'>Don&apos;t have an account <Link href="/signup" className='text-decoration: underline text-blue-500'>Sign Up</Link></p>
             </Card>
         </div>
     )
