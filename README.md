@@ -57,6 +57,11 @@ A web application built with Next.js that connects actors and casting directors.
 Make sure to set up the following environment variables in your `.env` file:
 
 - `DATABASE_URL`: Your database connection string
+- `NEXTAUTH_SECRET`: Run 
+   ```bash
+      npx auth secret 
+   ```
+   to get your secret
 
 ## Contributing
 
