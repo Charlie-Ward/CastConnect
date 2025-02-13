@@ -2,6 +2,7 @@
 //Copyright (C) 2025  Charlie Ward GPL v3
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -44,7 +45,7 @@ const Footer = (props: Props) => {
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Privacy Policy</li>
+              <li><Link href="/privacy-policy" className='text-decoration: hover:underline hover:text-blue-500'>Privacy Policy</Link></li>
               <li>Terms of Service</li>
               <li>Cookie Policy</li>
               <li>Accessibility</li>
@@ -53,7 +54,7 @@ const Footer = (props: Props) => {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Your Casting Platform. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CastConnect (Charlie Ward). All rights reserved. License can be found <Link href="/license" className='text-decoration: underline text-blue-500'>here.</Link></p>
         </div>
       </div>
     </div>
