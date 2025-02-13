@@ -3,7 +3,7 @@
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
 'use client'
-import React from 'react'
+import React, { use } from 'react'
 import { SignUpSchema } from '@/ZodSchema/UserSchema'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -22,12 +22,13 @@ import { Input } from "@/components/ui/input"
 import { Card, CardHeader } from '@/components/ui/card'
 import axios from 'axios'
 import { useToast } from '@/hooks/use-toast'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
 const SignUpForm = (props: Props) => {
     const { toast } = useToast()
-
+    const router = useRouter()
     const form = useForm<z.infer<typeof SignUpSchema>>({
         resolver: zodResolver(SignUpSchema),
         defaultValues: {
@@ -46,6 +47,7 @@ const SignUpForm = (props: Props) => {
             toast({
                 description: "User Registered Successfully"
             })
+            router.push('/signin')
             console.log(response)
         } catch (error) {
             console.log(error)

@@ -19,11 +19,14 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu"
+import { useSession, signOut } from 'next-auth/react'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
     const { setTheme } = useTheme()
+    const {data: Session, status} = useSession()
+    console.log(Session) 
     return (
         <div className='max-w-[1280px] mx-auto'>
             <div className='flex items-center py-4 gap-4 md:gap-10 justify-between'>
@@ -42,12 +45,21 @@ const Navbar = (props: Props) => {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
-                            <DropdownMenuItem>
-                                <Link href='/signup'>Sign Up</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <Link href='/signin'>Sign In</Link>
-                            </DropdownMenuItem>
+                            {status === 'unauthenticated' && (
+                                <DropdownMenuItem>
+                                    <Link href='/signin'>Sign In</Link>
+                                </DropdownMenuItem>
+                            )}
+                            {status === "authenticated" &&(
+                                <>
+                                    <DropdownMenuItem>
+                                        <p>Hello {Session.user?.name}</p>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <p className='text-red-500' onClick={() => signOut()}>Sign Out</p>
+                                    </DropdownMenuItem>
+                                </>
+                            )}
                         </DropdownMenuContent>
                     </DropdownMenu>
                     <DropdownMenu>
@@ -86,12 +98,21 @@ const Navbar = (props: Props) => {
                             <DropdownMenuItem className="focus:bg-accent">
                                 <Input type='text' placeholder='Search' className='w-full' />
                             </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <Link href='/signup' className="w-full">Sign Up</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <Link href='/signin' className='w-full'>Sign In</Link>
-                            </DropdownMenuItem>
+                            {status === 'unauthenticated' && (
+                                <DropdownMenuItem>
+                                    <Link href='/signin'>Sign In</Link>
+                                </DropdownMenuItem>
+                            )}
+                            {status === "authenticated" && (
+                                <>
+                                    <DropdownMenuItem>
+                                        <p>Hello {Session.user?.name}</p>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <p className='text-red-500' onClick={() => signOut}>Sign Out</p>
+                                    </DropdownMenuItem>
+                                </>
+                            )}
                             <DropdownMenuSub>
                                 <DropdownMenuSubTrigger>Theme</DropdownMenuSubTrigger>
                                 <DropdownMenuSubContent>

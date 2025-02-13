@@ -22,12 +22,15 @@ import { Input } from "@/components/ui/input"
 import { Card, CardHeader } from '@/components/ui/card'
 import axios from 'axios'
 import { useToast } from '@/hooks/use-toast'
+import { useSession, signIn, signOut} from 'next-auth/react';
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 type Props = {}
 
 const SignInForm = (props: Props) => {
     const { toast } = useToast()
-
+    const router = useRouter()
     const form = useForm<z.infer<typeof SignInSchema>>({
         resolver: zodResolver(SignInSchema),
         defaultValues: {
@@ -37,10 +40,17 @@ const SignInForm = (props: Props) => {
     })
     
     async function onSubmit(values: z.infer<typeof SignInSchema>) {
+        console.log(values)
         try {
+            const response = await signIn('credentials', {
+                email:values.email,
+                password:values.password
+            })
+            console.log(response)
             toast({
                 description: "User Registered Successfully"
             })
+            router.push('/')
         } catch (error) {
             console.log(error)
             toast({
@@ -81,9 +91,10 @@ const SignInForm = (props: Props) => {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit">Register</Button>
+                        <Button type="submit">Sign In</Button>
                     </form>
                 </Form>
+                <p className='text-m text-center'>Don't have an account <Link href="/signup" className='text-decoration: underline text-blue-500'>Sign Up</Link></p>
             </Card>
         </div>
     )
