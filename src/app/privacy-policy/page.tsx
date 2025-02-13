@@ -39,11 +39,11 @@ const page = (props: Props) => {
                     parts of our Service.<br/>
 
                 * Affiliate means an entity that controls, is controlled by or is under
-                    common control with a party, where "control" means ownership of 50% or
+                    common control with a party, where &quot;control&quot; means ownership of 50% or
                     more of the shares, equity interest or other securities entitled to vote
                     for election of directors or other managing authority.<br/>
 
-                * Company (referred to as either "the Company", "We", "Us" or "Our" in this
+                * Company (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this
                     Agreement) refers to CastConnect.<br/>
 
                 * Cookies are small files that are placed on Your computer, mobile device or
@@ -70,8 +70,8 @@ const page = (props: Props) => {
                     use of the Service or from the Service infrastructure itself (for example,
                     the duration of a page visit).<br/>
 
-                * Website refers to CastConnect, accessible from "https://www.cast-
-                    connect.vercel.app"<br/>
+                * Website refers to CastConnect, accessible from &quot;https://www.cast-
+                    connect.vercel.app&quot;<br/>
 
                 * You means the individual accessing or using the Service, or the company,
                     or other legal entity on behalf of which such individual is accessing or
@@ -103,7 +103,7 @@ const page = (props: Props) => {
 
                 Usage Data is collected automatically when using the Service.<br/>
 
-                Usage Data may include information such as Your Device's Internet Protocol
+                Usage Data may include information such as Your Device&apos;s Internet Protocol
                 address (e.g. IP address), browser type, browser version, the pages of our
                 Service that You visit, the time and date of Your visit, the time spent on
                 those pages, unique device identifiers and other diagnostic data.<br/>
@@ -139,7 +139,7 @@ const page = (props: Props) => {
                     popularity of a certain section and verifying system and server
                     integrity).<br/>
 
-                Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on
+                Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on
                 Your personal computer or mobile device when You go offline, while Session
                 Cookies are deleted as soon as You close Your web browser. You can learn more
                 about cookies on [TermsFeed
@@ -204,7 +204,7 @@ const page = (props: Props) => {
 
                 * To contact You: To contact You by email, telephone calls, SMS, or other
                     equivalent forms of electronic communication, such as a mobile
-                    application's push notifications regarding updates or informative
+                    application&apos;s push notifications regarding updates or informative
                     communications related to the functionalities, products or contracted
                     services, including the security updates, when necessary or reasonable for
                     their implementation.<br/>
@@ -269,7 +269,7 @@ const page = (props: Props) => {
                 Transfer of Your Personal Data  <br/>
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
 
-                Your information, including Personal Data, is processed at the Company's
+                Your information, including Personal Data, is processed at the Company&apos;s
                 operating offices and in any other places where the parties involved in the
                 processing are located. It means that this information may be transferred to —
                 and maintained on — computers located outside of Your state, province, country
@@ -340,7 +340,7 @@ const page = (props: Props) => {
                 100% secure. While We strive to use commercially acceptable means to protect
                 Your Personal Data, We cannot guarantee its absolute security.<br/>
                 <br/>
-                Children's Privacy  <br/>
+                Children&apos;s Privacy  <br/>
                 ------------------<br/>
 
                 Our Service does not address anyone under the age of 13. We do not knowingly
@@ -352,14 +352,14 @@ const page = (props: Props) => {
                 servers.<br/>
 
                 If We need to rely on consent as a legal basis for processing Your information
-                and Your country requires consent from a parent, We may require Your parent's
+                and Your country requires consent from a parent, We may require Your parent&apos;s
                 consent before We collect and use that information.<br/>
                 <br/>
                 Links to Other Websites  <br/>
                 -----------------------<br/>
 
                 Our Service may contain links to other websites that are not operated by Us.
-                If You click on a third party link, You will be directed to that third party's
+                If You click on a third party link, You will be directed to that third party&apos;s
                 site. We strongly advise You to review the Privacy Policy of every site You
                 visit.<br/>
 
@@ -372,7 +372,7 @@ const page = (props: Props) => {
                 changes by posting the new Privacy Policy on this page.<br/>
 
                 We will let You know via email and/or a prominent notice on Our Service, prior
-                to the change becoming effective and update the "Last updated" date at the top
+                to the change becoming effective and update the &quot;Last updated&quot; date at the top
                 of this Privacy Policy.<br/>
 
                 You are advised to review this Privacy Policy periodically for any changes.

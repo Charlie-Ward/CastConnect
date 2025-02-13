@@ -52,16 +52,16 @@ const page = (props: Props) => {
                 (1) assert copyright on the software, and (2) offer you this License
                 giving you legal permission to copy, distribute and/or modify it.<br/>
 
-                For the developers' and authors' protection, the GPL clearly explains
-                that there is no warranty for this free software.  For both users' and
-                authors' sake, the GPL requires that modified versions be marked as
+                For the developers&apos; and authors&apos; protection, the GPL clearly explains
+                that there is no warranty for this free software.  For both users&apos; and
+                authors&apos; sake, the GPL requires that modified versions be marked as
                 changed, so that their problems will not be attributed erroneously to
                 authors of previous versions.<br/>
 
                 Some devices are designed to deny users access to install or run
                 modified versions of the software inside them, although the manufacturer
                 can do so.  This is fundamentally incompatible with the aim of
-                protecting users' freedom to change the software.  The systematic
+                protecting users&apos; freedom to change the software.  The systematic
                 pattern of such abuse occurs in the area of products for individuals to
                 use, which is precisely where it is most unacceptable.  Therefore, we
                 have designed this version of the GPL to prohibit the practice for those
@@ -83,35 +83,35 @@ const page = (props: Props) => {
 
                 0. Definitions.<br/>
 
-                "This License" refers to version 3 of the GNU General Public License.<br/>
+                &quot;This License&quot; refers to version 3 of the GNU General Public License.<br/>
 
-                "Copyright" also means copyright-like laws that apply to other kinds of
+                &quot;Copyright&quot; also means copyright-like laws that apply to other kinds of
                 works, such as semiconductor masks.<br/>
 
-                "The Program" refers to any copyrightable work licensed under this
-                License.  Each licensee is addressed as "you".  "Licensees" and
-                "recipients" may be individuals or organizations.<br/>
+                &quot;The Program&quot; refers to any copyrightable work licensed under this
+                License.  Each licensee is addressed as &quot;you&quot;.  &quot;Licensees&quot; and
+                &quot;recipients&quot; may be individuals or organizations.<br/>
 
-                To "modify" a work means to copy from or adapt all or part of the work
+                To &quot;modify&quot; a work means to copy from or adapt all or part of the work
                 in a fashion requiring copyright permission, other than the making of an
-                exact copy.  The resulting work is called a "modified version" of the
-                earlier work or a work "based on" the earlier work.<br/>
+                exact copy.  The resulting work is called a &quot;modified version&quot; of the
+                earlier work or a work &quot;based on&quot; the earlier work.<br/>
 
-                A "covered work" means either the unmodified Program or a work based
+                A &quot;covered work&quot; means either the unmodified Program or a work based
                 on the Program.<br/>
 
-                To "propagate" a work means to do anything with it that, without
+                To &quot;propagate&quot; a work means to do anything with it that, without
                 permission, would make you directly or secondarily liable for
                 infringement under applicable copyright law, except executing it on a
                 computer or modifying a private copy.  Propagation includes copying,
                 distribution (with or without modification), making available to the
                 public, and in some countries other activities as well.<br/>
 
-                To "convey" a work means any kind of propagation that enables other
+                To &quot;convey&quot; a work means any kind of propagation that enables other
                 parties to make or receive copies.  Mere interaction with a user through
                 a computer network, with no transfer of a copy, is not conveying.<br/>
 
-                An interactive user interface displays "Appropriate Legal Notices"
+                An interactive user interface displays &quot;Appropriate Legal Notices&quot;
                 to the extent that it includes a convenient and prominently visible
                 feature that (1) displays an appropriate copyright notice, and (2)
                 tells the user that there is no warranty for the work (except to the
@@ -122,30 +122,30 @@ const page = (props: Props) => {
 
                 1. Source Code.<br/>
 
-                The "source code" for a work means the preferred form of the work
-                for making modifications to it.  "Object code" means any non-source
+                The &quot;source code&quot; for a work means the preferred form of the work
+                for making modifications to it.  &quot;Object code&quot; means any non-source
                 form of a work.<br/>
 
-                A "Standard Interface" means an interface that either is an official
+                A &quot;Standard Interface&quot; means an interface that either is an official
                 standard defined by a recognized standards body, or, in the case of
                 interfaces specified for a particular programming language, one that
                 is widely used among developers working in that language.<br/>
 
-                The "System Libraries" of an executable work include anything, other
+                The &quot;System Libraries&quot; of an executable work include anything, other
                 than the work as a whole, that (a) is included in the normal form of
                 packaging a Major Component, but which is not part of that Major
                 Component, and (b) serves only to enable use of the work with that
                 Major Component, or to implement a Standard Interface for which an
                 implementation is available to the public in source code form.  A
-                "Major Component", in this context, means a major essential component
+                &quot;Major Component&quot;, in this context, means a major essential component
                 (kernel, window system, and so on) of the specific operating system
                 (if any) on which the executable work runs, or a compiler used to
                 produce the work, or an object code interpreter used to run it.<br/>
 
-                The "Corresponding Source" for a work in object code form means all
+                The &quot;Corresponding Source&quot; for a work in object code form means all
                 the source code needed to generate, install, and (for an executable
                 work) run the object code and to modify the work, including scripts to
-                control those activities.  However, it does not include the work's
+                control those activities.  However, it does not include the work&apos;s
                 System Libraries, or general-purpose tools or generally available free
                 programs which are used unmodified in performing those activities but
                 which are not part of the work.  For example, Corresponding Source
@@ -187,7 +187,7 @@ const page = (props: Props) => {
                 the conditions stated below.  Sublicensing is not allowed; section 10
                 makes it unnecessary.<br/>
 
-                3. Protecting Users' Legal Rights From Anti-Circumvention Law.<br/>
+                3. Protecting Users&apos; Legal Rights From Anti-Circumvention Law.<br/>
 
                 No covered work shall be deemed part of an effective technological
                 measure under any applicable law fulfilling obligations under article
@@ -199,13 +199,13 @@ const page = (props: Props) => {
                 circumvention of technological measures to the extent such circumvention
                 is effected by exercising rights under this License with respect to
                 the covered work, and you disclaim any intention to limit operation or
-                modification of the work as a means of enforcing, against the work's
-                users, your or third parties' legal rights to forbid circumvention of
+                modification of the work as a means of enforcing, against the work&apos;s
+                users, your or third parties&apos; legal rights to forbid circumvention of
                 technological measures.<br/>
 
                 4. Conveying Verbatim Copies.<br/>
 
-                You may convey verbatim copies of the Program's source code as you
+                You may convey verbatim copies of the Program&apos;s source code as you
                 receive it, in any medium, provided that you conspicuously and
                 appropriately publish on each copy an appropriate copyright notice;
                 keep intact all notices stating that this License and any
@@ -228,7 +228,7 @@ const page = (props: Props) => {
                     b) The work must carry prominent notices stating that it is
                     released under this License and any conditions added under section
                     7.  This requirement modifies the requirement in section 4 to
-                    "keep intact all notices".<br/>
+                    &quot;keep intact all notices&quot;.<br/>
 
                     c) You must license the entire work, as a whole, under this
                     License to anyone who comes into possession of a copy.  This
@@ -247,8 +247,8 @@ const page = (props: Props) => {
                 works, which are not by their nature extensions of the covered work,
                 and which are not combined with it such as to form a larger program,
                 in or on a volume of a storage or distribution medium, is called an
-                "aggregate" if the compilation and its resulting copyright are not
-                used to limit the access or legal rights of the compilation's users
+                &quot;aggregate&quot; if the compilation and its resulting copyright are not
+                used to limit the access or legal rights of the compilation&apos;s users
                 beyond what the individual works permit.  Inclusion of a covered work
                 in an aggregate does not cause this License to apply to the other
                 parts of the aggregate.<br/>
@@ -305,12 +305,12 @@ const page = (props: Props) => {
                 from the Corresponding Source as a System Library, need not be
                 included in conveying the object code work.<br/>
 
-                A "User Product" is either (1) a "consumer product", which means any
+                A &quot;User Product&quot; is either (1) a &quot;consumer product&quot;, which means any
                 tangible personal property which is normally used for personal, family,
                 or household purposes, or (2) anything designed or sold for incorporation
                 into a dwelling.  In determining whether a product is a consumer product,
                 doubtful cases shall be resolved in favor of coverage.  For a particular
-                product received by a particular user, "normally used" refers to a
+                product received by a particular user, &quot;normally used&quot; refers to a
                 typical or common use of that class of product, regardless of the status
                 of the particular user or of the way in which the particular user
                 actually uses, or expects or is expected to use, the product.  A product
@@ -318,7 +318,7 @@ const page = (props: Props) => {
                 commercial, industrial or non-consumer uses, unless such uses represent
                 the only significant mode of use of the product.<br/>
 
-                "Installation Information" for a User Product means any methods,
+                &quot;Installation Information&quot; for a User Product means any methods,
                 procedures, authorization keys, or other information required to install
                 and execute modified versions of a covered work in that User Product from
                 a modified version of its Corresponding Source.  The information must
@@ -353,7 +353,7 @@ const page = (props: Props) => {
 
                 7. Additional Terms.<br/>
 
-                "Additional permissions" are terms that supplement the terms of this
+                &quot;Additional permissions&quot; are terms that supplement the terms of this
                 License by making exceptions from one or more of its conditions.
                 Additional permissions that are applicable to the entire Program shall
                 be treated as though they were included in this License, to the extent
@@ -396,8 +396,8 @@ const page = (props: Props) => {
                     any liability that these contractual assumptions directly impose on
                     those licensors and authors.<br/>
 
-                All other non-permissive additional terms are considered "further
-                restrictions" within the meaning of section 10.  If the Program as you
+                All other non-permissive additional terms are considered &quot;further
+                restrictions&quot; within the meaning of section 10.  If the Program as you
                 received it, or any part of it, contains a notice stating that it is
                 governed by this License along with a term that is a further
                 restriction, you may remove that term.  If a license document contains
@@ -461,12 +461,12 @@ const page = (props: Props) => {
                 propagate that work, subject to this License.  You are not responsible
                 for enforcing compliance by third parties with this License.<br/>
 
-                An "entity transaction" is a transaction transferring control of an
+                An &quot;entity transaction&quot; is a transaction transferring control of an
                 organization, or substantially all assets of one, or subdividing an
                 organization, or merging organizations.  If propagation of a covered
                 work results from an entity transaction, each party to that
                 transaction who receives a copy of the work also receives whatever
-                licenses to the work the party's predecessor in interest had or could
+                licenses to the work the party&apos;s predecessor in interest had or could
                 give under the previous paragraph, plus a right to possession of the
                 Corresponding Source of the work from the predecessor in interest, if
                 the predecessor has it or can get it with reasonable efforts.<br/>
@@ -481,29 +481,29 @@ const page = (props: Props) => {
 
                 11. Patents.<br/>
 
-                A "contributor" is a copyright holder who authorizes use under this
+                A &quot;contributor&quot; is a copyright holder who authorizes use under this
                 License of the Program or a work on which the Program is based.  The
-                work thus licensed is called the contributor's "contributor version".<br/>
+                work thus licensed is called the contributor&apos;s &quot;contributor version&quot;.<br/>
 
-                A contributor's "essential patent claims" are all patent claims
+                A contributor&apos;s &quot;essential patent claims&quot; are all patent claims
                 owned or controlled by the contributor, whether already acquired or
                 hereafter acquired, that would be infringed by some manner, permitted
                 by this License, of making, using, or selling its contributor version,
                 but do not include claims that would be infringed only as a
                 consequence of further modification of the contributor version. For
-                purposes of this definition, "control" includes the right to grant
+                purposes of this definition, &quot;control&quot; includes the right to grant
                 patent sublicenses in a manner consistent with the requirements of
                 this License.<br/>
 
                 Each contributor grants you a non-exclusive, worldwide, royalty-free
-                patent license under the contributor's essential patent claims, to
+                patent license under the contributor&apos;s essential patent claims, to
                 make, use, sell, offer for sale, import and otherwise run, modify and
                 propagate the contents of its contributor version.<br/>
 
-                In the following three paragraphs, a "patent license" is any express
+                In the following three paragraphs, a &quot;patent license&quot; is any express
                 agreement or commitment, however denominated, not to enforce a patent
                 (such as an express permission to practice a patent or covenant not to
-                sue for patent infringement).  To "grant" such a patent license to a
+                sue for patent infringement).  To &quot;grant&quot; such a patent license to a
                 party means to make such an agreement or commitment not to enforce a
                 patent against the party.<br/>
 
@@ -515,9 +515,9 @@ const page = (props: Props) => {
                 available, or (2) arrange to deprive yourself of the benefit of the
                 patent license for this particular work, or (3) arrange, in a manner
                 consistent with the requirements of this License, to extend the patent
-                license to downstream recipients.  "Knowingly relying" means you have
+                license to downstream recipients.  &quot;Knowingly relying&quot; means you have
                 actual knowledge that, but for the patent license, your conveying the
-                covered work in a country, or your recipient's use of the covered work
+                covered work in a country, or your recipient&apos;s use of the covered work
                 in a country, would infringe one or more identifiable patents in that
                 country that you have reason to believe are valid.<br/>
 
@@ -529,7 +529,7 @@ const page = (props: Props) => {
                 you grant is automatically extended to all recipients of the covered
                 work and works based on it.<br/>
 
-                A patent license is "discriminatory" if it does not include within
+                A patent license is &quot;discriminatory&quot; if it does not include within
                 the scope of its coverage, prohibits the exercise of, or is
                 conditioned on the non-exercise of one or more of the rights that are
                 specifically granted under this License.  You may not convey a covered
@@ -548,7 +548,7 @@ const page = (props: Props) => {
                 any implied license or other defenses to infringement that may
                 otherwise be available to you under applicable patent law.<br/>
 
-                12. No Surrender of Others' Freedom.<br/>
+                12. No Surrender of Others&apos; Freedom.<br/>
 
                 If conditions are imposed on you (whether by court order, agreement or
                 otherwise) that contradict the conditions of this License, they do not
@@ -580,7 +580,7 @@ const page = (props: Props) => {
 
                 Each version is given a distinguishing version number.  If the
                 Program specifies that a certain numbered version of the GNU General
-                Public License "or any later version" applies to it, you have the
+                Public License &quot;or any later version&quot; applies to it, you have the
                 option of following the terms and conditions either of that numbered
                 version or of any later version published by the Free Software
                 Foundation.  If the Program does not specify a version number of the
@@ -588,7 +588,7 @@ const page = (props: Props) => {
                 by the Free Software Foundation.<br/>
 
                 If the Program specifies that a proxy can decide which future
-                versions of the GNU General Public License can be used, that proxy's
+                versions of the GNU General Public License can be used, that proxy&apos;s
                 public statement of acceptance of a version permanently authorizes you
                 to choose that version for the Program.<br/>
 
@@ -601,7 +601,7 @@ const page = (props: Props) => {
 
                 THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
                 APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
-                HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+                HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM &quot;AS IS&quot; WITHOUT WARRANTY
                 OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
                 THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
                 PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
