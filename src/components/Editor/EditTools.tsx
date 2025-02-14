@@ -74,7 +74,7 @@ const EditTools = ({editor}: Props) => {
             </Button>
             <Button
                 size='icon'
-                onClick={() => editor.chain().focus().toggleHeading({ level: 4}).run()}
+                onClick={() => editor.chain().focus().toggleHeading({ level: 3}).run()}
                 className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}
             >
                 H3
