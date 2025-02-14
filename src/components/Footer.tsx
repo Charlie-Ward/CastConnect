@@ -15,30 +15,30 @@ const Footer = (props: Props) => {
           <div>
             <h3 className="font-semibold mb-4">About Us</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Our Story</li>
+              {/* <li>Our Story</li>
               <li>Careers</li>
               <li>Press</li>
-              <li>Contact</li>
+              <li>Contact</li> */}
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4">For Talent</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Browse Roles</li>
+              {/* <li>Browse Roles</li>
               <li>Create Profile</li>
               <li>Submit Applications</li>
-              <li>Resources</li>
+              <li>Resources</li> */}
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">For Casting</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Post a Role</li>
+              {/* <li>Post a Role</li>
               <li>Talent Search</li>
               <li>Manage Casting</li>
-              <li>Pricing</li>
+              <li>Pricing</li> */}
             </ul>
           </div>
 
@@ -46,9 +46,10 @@ const Footer = (props: Props) => {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-600">
               <li><Link href="/privacy-policy" className='text-decoration: hover:underline hover:text-blue-500'>Privacy Policy</Link></li>
-              <li>Terms of Service</li>
-              <li>Cookie Policy</li>
-              <li>Accessibility</li>
+              <li><Link href="/find-out-more" className='text-decoration: hover:underline hover:text-blue-500'>Disclaimer Explainer</Link></li>
+              {/* <li>Terms of Service</li> */}
+              {/* <li>Cookie Policy</li>
+              <li>Accessibility</li> */}
             </ul>
           </div>
         </div>
