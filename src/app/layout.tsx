@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 import Provider from "@/components/Provider";
+import DisclaimerWarning from "@/components/DisclaimerWarning";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Toaster />
+            <DisclaimerWarning />
             <Navbar />
             {children}
             <Footer />
