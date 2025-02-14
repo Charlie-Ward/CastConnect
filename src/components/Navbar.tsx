@@ -87,7 +87,7 @@ const Navbar = (props: Props) => {
                 {/* Mobile Navigation */}
                 <div className='md:hidden'>
                     <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
+                        <DropdownMenuTrigger>
                             <Button variant="outline" size="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -95,11 +95,11 @@ const Navbar = (props: Props) => {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="w-[200px]">
-                            <DropdownMenuItem className="focus:bg-accent">
+                            <div className="focus:bg-accent px-2 py-1.5">
                                 <Input type='text' placeholder='Search' className='w-full' />
-                            </DropdownMenuItem>
+                            </div>
                             {status === 'unauthenticated' && (
-                                <DropdownMenuItem>
+                                <DropdownMenuItem asChild>
                                     <Link href='/signin'>Sign In</Link>
                                 </DropdownMenuItem>
                             )}
@@ -108,21 +108,21 @@ const Navbar = (props: Props) => {
                                     <DropdownMenuItem>
                                         <p>Hello {Session.user?.name}</p>
                                     </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <p className='text-red-500' onClick={() => signOut}>Sign Out</p>
+                                    <DropdownMenuItem onSelect={() => signOut()}>
+                                        <p className='text-red-500'>Sign Out</p>
                                     </DropdownMenuItem>
                                 </>
                             )}
                             <DropdownMenuSub>
                                 <DropdownMenuSubTrigger>Theme</DropdownMenuSubTrigger>
                                 <DropdownMenuSubContent>
-                                    <DropdownMenuItem onClick={() => setTheme("light")}>
+                                    <DropdownMenuItem onSelect={() => setTheme("light")}>
                                         Light Mode
                                     </DropdownMenuItem>
-                                    <DropdownMenuItem onClick={() => setTheme("dark")}>
+                                    <DropdownMenuItem onSelect={() => setTheme("dark")}>
                                         Dark Mode
                                     </DropdownMenuItem>
-                                    <DropdownMenuItem onClick={() => setTheme("system")}>
+                                    <DropdownMenuItem onSelect={() => setTheme("system")}>
                                         System Theme
                                     </DropdownMenuItem>
                                 </DropdownMenuSubContent>
