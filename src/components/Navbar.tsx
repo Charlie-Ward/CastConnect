@@ -8,7 +8,7 @@ import { Input } from './ui/input'
 import { Button } from './ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Moon, Sun, User} from "lucide-react"
+import { Moon, Sun, User, DoorOpen} from "lucide-react"
 import { useTheme } from 'next-themes'
 import {
     DropdownMenu,
@@ -19,6 +19,11 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu"
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger
+} from '@/components/ui/hover-card'
 import { useSession, signOut } from 'next-auth/react'
 
 type Props = {}
@@ -38,6 +43,16 @@ const Navbar = (props: Props) => {
                 </div>
                 {/* Desktop Navigation */}
                 <div className='hidden md:flex items-center gap-4'>
+                    <HoverCard>
+                        <HoverCardTrigger asChild>
+                            <Button variant='outline' size='icon'>
+                                <Link href='/app'><DoorOpen /></Link>
+                            </Button>
+                        </HoverCardTrigger>
+                        <HoverCardContent className='w-auto opacity-15 text-black'>
+                            Go To App
+                        </HoverCardContent>
+                    </HoverCard>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button variant="outline" size="icon">
