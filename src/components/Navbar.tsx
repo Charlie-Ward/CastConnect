@@ -31,7 +31,6 @@ type Props = {}
 const Navbar = (props: Props) => {
     const { setTheme } = useTheme()
     const {data: Session, status} = useSession()
-    console.log(Session) 
     return (
         <div className='max-w-[1280px] mx-auto'>
             <div className='flex items-center py-4 gap-4 md:gap-10 justify-between'>
@@ -65,7 +64,7 @@ const Navbar = (props: Props) => {
                                     <Link href='/signin'>Sign In</Link>
                                 </DropdownMenuItem>
                             )}
-                            {status === "authenticated" &&(
+                            {status === "authenticated" && (
                                 <>
                                     <DropdownMenuItem>
                                         <p>Hello {Session.user?.name}</p>
