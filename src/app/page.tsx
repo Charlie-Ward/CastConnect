@@ -4,6 +4,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,11 +14,13 @@ export default function Home() {
           <h1 className="text-4xl font-bold mb-4">Welcome to CastConnect</h1>
           <p className="text-xl text-gray-600 mb-8">The premier platform connecting casting directors with talent</p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" variant="default">
+            {/* <Button size="lg" variant="default">
               Post a Casting Call
-            </Button>
-            <Button size="lg" variant="outline">
-              Browse Opportunities
+            </Button> */}
+            <Button size="lg" variant="default">
+              <Link href='/app'>
+                Browse Opportunities
+              </Link>
             </Button>
           </div>
         </div>
@@ -57,8 +60,8 @@ export default function Home() {
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-semibold mb-6">Ready to get started?</h2>
           <div className="flex justify-center gap-4">
-            <Button variant="default">Sign Up Now</Button>
-            <Button variant="secondary">Learn More</Button>
+            <Button variant="default"><Link href='/signup'>Sign Up Now</Link></Button>
+            <Button variant="secondary"><Link href='/signin'>Log In</Link></Button>
           </div>
         </div>
       </div>
