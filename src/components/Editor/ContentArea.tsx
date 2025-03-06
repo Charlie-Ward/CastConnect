@@ -17,6 +17,7 @@ import Document from '@tiptap/extension-document'
 import Paragraph from '@tiptap/extension-paragraph'
 import Text from '@tiptap/extension-text'
 import EditTools from './EditTools'
+import Placeholder from '@tiptap/extension-placeholder'
 
 type Props = {
   content: string
@@ -43,9 +44,11 @@ const ContentArea = ({content, setContent}: Props) => {
         openOnClick:true
       }),
       BulletList,
-      ListItem
+      ListItem,
+      Placeholder.configure({
+        placeholder: 'Write your post'
+      })
     ],
-    content:'<p>Write your post</p>',
     autofocus:true,
     editorProps:{
       attributes:{
