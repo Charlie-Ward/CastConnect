@@ -18,18 +18,18 @@ export const options:NextAuthOptions = {
                 email:{},
                 password:{}
             },
-            async authorize(credentials: Record<"email" | "password", string> | undefined, req) {
+            async authorize(credentials: Record<"email" | "password", string> | undefined, req) { //Called in the sumbit function on the signIn page
                 if(!credentials?.email || !credentials?.password){
                     return null
                 }
 
-                const user = await prisma.user.findUnique({
+                const user = await prisma.user.findUnique({ //Assign the user associated with the email to user
                     where:{
                         email: credentials.email
                     }
                 })
 
-                if(!user || !user.password){
+                if(!user || !user.password){ //If user doesn't exist or if it doesn't have a password
                     return null
                 }
 
@@ -38,7 +38,6 @@ export const options:NextAuthOptions = {
                 if(!passwordcompare){
                     return null
                 }
-
                 return user
             },
         })

@@ -2,17 +2,20 @@
 //Copyright (C) 2025  Charlie Ward GPL v3
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
+// Setting up the generator so it knows what syntax to use
 generator client {
   provider = "prisma-client-js"
 }
 
+// Setting where the output should be sent to
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+// Creating the Account table
 model Account {
-  id                 String  @id @default(cuid())
+  id                 String  @id @default(cuid()) //Making it so this is the primary key.
   userId             String
   type               String
   provider           String
@@ -25,11 +28,12 @@ model Account {
   id_token           String?  @db.Text
   session_state      String?
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) //This creates a link between a user and an account
 
   @@unique([provider, providerAccountId])
 }
 
+// Creating the Session table
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
@@ -38,6 +42,7 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
+// Creating the User table
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -60,6 +65,7 @@ model User {
   verificationTokens VerificationToken[]
 }
 
+// Creating the VerificationToken table
 model VerificationToken {
   id        String   @id @default(cuid())
   token     String   @unique
@@ -69,7 +75,7 @@ model VerificationToken {
   updatedAt DateTime @updatedAt
 }
 
-
+// Creating the ActivateToken table
 model ActivateToken {
   id  Int  @id @default(autoincrement())
   token String @unique
@@ -80,12 +86,14 @@ model ActivateToken {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
+//Setting the different types of posts available
 enum TypePost {
   IMAGE
   VIDEO
   POST
 }
 
+// Creating the Post table
 model Post {
   id      String  @id @default(dbgenerated("concat('post_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
   content  String?
@@ -103,6 +111,7 @@ model Post {
   Share     Share[]
 }
 
+// Creating the Image table
 model Image {
   id      String  @id @default(dbgenerated("concat('image_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
   url     String
@@ -111,6 +120,7 @@ model Image {
   Post        Post @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
 
+// Creating the Video table
 model Video {
   id      String  @id @default(dbgenerated("concat('video_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
   url     String
@@ -119,6 +129,7 @@ model Video {
   Post        Post @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
 
+// Creating the Comment table
 model Comment {
     id      String  @id @default(dbgenerated("concat('comment_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
     content String
@@ -133,6 +144,7 @@ model Comment {
     like     Like[]
 }
 
+// Creating the Like table
 model Like {
       id      String  @id @default(dbgenerated("concat('like_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
       createdAt   DateTime @default(now())
@@ -144,6 +156,7 @@ model Like {
       comment   Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
 }
 
+// Creating the Save table
 model Save {
     id      String  @id @default(dbgenerated("concat('save_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
     createdAt   DateTime @default(now())
@@ -153,6 +166,7 @@ model Save {
     post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
 
+// Creating the Share table
 model Share {
       id      String  @id @default(dbgenerated("concat('share_', replace(cast(gen_random_uuid() as text), '-', ''))")) @db.Text
       postId  String

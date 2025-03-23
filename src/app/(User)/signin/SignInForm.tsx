@@ -31,6 +31,8 @@ type Props = {}
 const SignInForm = (props: Props) => {
     const { toast } = useToast()
     const router = useRouter()
+
+    // use the SignInSchema for this form
     const form = useForm<z.infer<typeof SignInSchema>>({
         resolver: zodResolver(SignInSchema),
         defaultValues: {
@@ -42,13 +44,14 @@ const SignInForm = (props: Props) => {
     async function onSubmit(values: z.infer<typeof SignInSchema>) {
         console.log(values)
         try {
+            // Sends details to an internal signIn command that I later pick up at api/auth/[...nextauth]/*
             const response = await signIn('credentials', {
                 email:values.email,
                 password:values.password
             })
             console.log(response)
             toast({
-                description: "User Registered Successfully"
+                description: "User Log In Successful"
             })
             router.push('/')
         } catch (error) {
@@ -64,6 +67,7 @@ const SignInForm = (props: Props) => {
             <Card className='p-5 max-w-[600px] mx-auto'>
                 <CardHeader className='text-2xl font-semibold text-center'>Sign In</CardHeader>
                 <Form {...form}>
+                    {/* Creating the form */}
                     <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
                         <FormField
                             control={form.control}

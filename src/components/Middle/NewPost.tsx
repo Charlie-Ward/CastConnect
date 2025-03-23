@@ -102,8 +102,6 @@ const NewPost = (props: Props) => {
     const CreatePost = () => {
         const formData = new FormData()
         
-        console.log('HELLO')
-        console.log(content)
         if(content == "<p></p>") {
             console.log("Post is not valid")
             alert('Post is not valid')
