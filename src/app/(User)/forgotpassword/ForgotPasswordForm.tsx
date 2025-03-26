@@ -22,6 +22,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
@@ -42,6 +43,7 @@ const ForgotPasswordSchema = z.object({
 
 const ForgotPasswordForm = (props: Props) => {
     const { toast } = useToast()
+    const router = useRouter()
     const form = useForm<z.infer<typeof ForgotPasswordSchema>>({
         resolver: zodResolver(ForgotPasswordSchema),
     })
@@ -57,6 +59,7 @@ const ForgotPasswordForm = (props: Props) => {
                 description: "Password changed"
             })
             console.log(response)
+            router.push('/signin')
         } catch (error) {
             console.log("Error", error)
             toast({

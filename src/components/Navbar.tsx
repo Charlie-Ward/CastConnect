@@ -29,16 +29,16 @@ import { useSession, signOut } from 'next-auth/react'
 type Props = {}
 
 const Navbar = (props: Props) => {
-    const { setTheme } = useTheme()
-    const {data: Session, status} = useSession()
+    const { setTheme } = useTheme() // Able to change the dark/light mode
+    const {data: Session, status} = useSession() // Able to see the session details from next-auth
     return (
         <div className='max-w-[1280px] mx-auto'>
             <div className='flex items-center py-4 gap-4 md:gap-10 justify-between'>
                 <a href='/'>
-                    <Image src='/logo.png' width={100} height={40} alt='Logo Image' />
+                    <Image src='/logo.png' width={100} height={40} alt='Logo Image' /> {/* Creates the logo */}
                 </a>
                 <div className='hidden md:block w-3/4'>
-                    <Input type='text' placeholder='Search' className='w-full' />
+                    <Input type='text' placeholder='Search' className='w-full' /> {/* Search bar may be removed */}
                 </div>
                 {/* Desktop Navigation */}
                 <div className='hidden md:flex items-center gap-4'>
@@ -59,15 +59,15 @@ const Navbar = (props: Props) => {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
-                            {status === 'unauthenticated' && (
+                            {status === 'unauthenticated' && ( // If user is not logged in
                                 <DropdownMenuItem>
                                     <Link href='/signin'>Sign In</Link>
                                 </DropdownMenuItem>
                             )}
-                            {status === "authenticated" && (
+                            {status === "authenticated" && ( //If user is logged in
                                 <>
                                     <DropdownMenuItem>
-                                        <p>Hello {Session.user?.name}</p>
+                                        <p>Hello {Session.user?.name}</p> {/* Get users name */}
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
                                         <p className='text-red-500' onClick={() => signOut()}>Sign Out</p>
@@ -112,18 +112,18 @@ const Navbar = (props: Props) => {
                             <div className="focus:bg-accent px-2 py-1.5">
                                 <Input type='text' placeholder='Search' className='w-full' />
                             </div>
-                            {status === 'unauthenticated' && (
+                            {status === 'unauthenticated' && ( // If user is not logged in
                                 <DropdownMenuItem asChild>
-                                    <Link href='/signin'>Sign In</Link>
+                                    <Link href='/signin'>Sign In</Link> {/* Show sign in button */}
                                 </DropdownMenuItem>
                             )}
-                            {status === "authenticated" && (
+                            {status === "authenticated" && ( // If user is logged in
                                 <>
                                     <DropdownMenuItem>
-                                        <p>Hello {Session.user?.name}</p>
+                                        <p>Hello {Session.user?.name}</p> {/* Get user's name */}
                                     </DropdownMenuItem>
                                     <DropdownMenuItem onSelect={() => signOut()}>
-                                        <p className='text-red-500'>Sign Out</p>
+                                        <p className='text-red-500'>Sign Out</p> {/* Show sign out button */}
                                     </DropdownMenuItem>
                                 </>
                             )}
