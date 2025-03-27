@@ -119,7 +119,7 @@ const SignInForm = (props: Props) => {
                 {status === "authenticated" && ( //If user is logged in
                     <div>
                         <p className='text-centre'>You are currently logged in to log in with another account.</p>
-                        <p className='text-centre'>To contiune please first log out.</p>
+                        <p className='text-centre'>To continue please first logout.</p>
                         <p className='text-red-500 text-center cursor-pointer underline' onClick={() => signOut()}>Sign Out</p>
                     </div>
                 )}
