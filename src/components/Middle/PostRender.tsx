@@ -10,6 +10,8 @@ import { Lasso } from 'lucide-react'
 import { fetchInternalImage } from 'next/dist/server/image-optimizer'
 import { Card } from '../ui/card'
 import Image from 'next/image'
+import { Separator } from '../ui/separator'
+import PostSkeleton from './PostSkeleton'
 
 type Props = {}
 
@@ -72,7 +74,11 @@ const PostRender = (props: Props) => {
         )
     }
 
-    console.log(data)
+    if(isLoading) {
+        return (
+            <PostSkeleton />
+        )
+    }
 
     return (
         <div className='mt-8'>
@@ -113,6 +119,7 @@ const PostRenderData = ({data}:{data:PostData}) => {
                     <p className='prose prose-sm sm:prose focus:outline-none prose-p:loading-0 prose-a:text-red-400 xl:prose-base dark:prose-code:text-white dark:prose-p:text-white dark:prose-h1:text-white dark:prose-h2:text-white dark:prose-h3:text-white dark:prose-strong:text-white dark:prose-italic:text-white' dangerouslySetInnerHTML={{__html:data.content}}></p>
                 )}
             </div>
+            <Separator />
         </Card>
     )
 }
