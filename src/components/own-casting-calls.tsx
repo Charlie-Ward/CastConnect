@@ -28,7 +28,7 @@ export interface PostData extends Post {
     }
 }
 
-const ownPostRender = (props: Props) => {
+const OwnPostRender = (props: Props) => {
     const { ref, inView } = useInView()
     const AllPost = async ({ take, lastCursor, typePost }: PostQueryParams) => {
         const response = await axios.get('/api/getOwnPost', {
@@ -102,7 +102,7 @@ const ownPostRender = (props: Props) => {
     )
 }
 
-export default ownPostRender
+export default OwnPostRender
 
 const PostRenderData = ({ data }: { data: PostData }) => {
 
