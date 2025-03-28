@@ -30,10 +30,10 @@ const MenuOptions = (props: Props) => {
   return (
     <div className='lg:w-1/4 md:1/5 p-5 max-md:hidden my-5'>
         <div className='flex flex-col'>
-            {MenuItems.map((item, index) => (
+            {/* {MenuItems.map((item, index) => (
                 <MenuItem key={index} icon={item.icon} label={item.label} href={item.href} />
             ))}
-            <Separator className='my-4' />
+            <Separator className='my-4' /> */}
         </div>
     </div>
   )
