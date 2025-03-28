@@ -37,9 +37,9 @@ const Navbar = (props: Props) => {
                 <a href='/'>
                     <Image src='/logo.png' width={100} height={40} alt='Logo Image' /> {/* Creates the logo */}
                 </a>
-                <div className='hidden md:block w-3/4'>
-                    <Input type='text' placeholder='Search' className='w-full' /> {/* Search bar may be removed */}
-                </div>
+                {/* <div className='hidden md:block w-3/4'>
+                    <Input type='text' placeholder='Search' className='w-full' /> {/* Search bar may be removed
+                </div> */}
                 {/* Desktop Navigation */}
                 <div className='hidden md:flex items-center gap-4'>
                     <HoverCard>
@@ -109,9 +109,9 @@ const Navbar = (props: Props) => {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="w-[200px]">
-                            <div className="focus:bg-accent px-2 py-1.5">
+                            {/* <div className="focus:bg-accent px-2 py-1.5">
                                 <Input type='text' placeholder='Search' className='w-full' />
-                            </div>
+                            </div> */}
                             {status === 'unauthenticated' && ( // If user is not logged in
                                 <DropdownMenuItem asChild>
                                     <Link href='/signin'>Sign In</Link> {/* Show sign in button */}
