@@ -10,7 +10,7 @@ import MenuOptions from '@/components/LeftSide/MenuOptions'
 
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
 
     const {data: Session, status} = useSession()
 
@@ -45,4 +45,4 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Page

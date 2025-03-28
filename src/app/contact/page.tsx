@@ -8,16 +8,12 @@ const ContactPage = () => {
             <div className="bg-card text-card-foreground rounded-lg shadow-md p-8 max-w-lg w-full">
                 <h1 className="text-xl font-semibold mb-4">Contact Us</h1>
                 <p className="text-muted-foreground mb-6">
-                    We'd love to hear from you! Here's how you can reach us:
+                    We&apos;d love to hear from you! Here&apos;s how you can reach us:
                 </p>
                 <div className="space-y-4">
                     <div>
                         <h2 className="text-lg font-medium">Email</h2>
                         <p className="text-foreground">contact@castconnect.com</p>
-                    </div>
-                    <div>
-                        <h2 className="text-lg font-medium">Phone</h2>
-                        <p className="text-foreground">+1 (123) 456-7890</p>
                     </div>
                     <div>
                         <h2 className="text-lg font-medium">Address</h2>

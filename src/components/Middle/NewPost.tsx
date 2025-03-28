@@ -66,7 +66,7 @@ const NewPost = (props: Props) => {
                 description: 'Your post has been created successfully',
             })
             console.log(response)
-            window.location.reload()
+            router.push('/app')
         } catch (error: any) {
             console.error('Error creating post:', error.response?.data || error)
             alert('Error creating post: ' + (error.response?.data?.message || error.message))

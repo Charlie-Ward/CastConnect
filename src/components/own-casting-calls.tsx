@@ -10,6 +10,7 @@ import { Card } from './ui/card'
 import Image from 'next/image'
 import { Separator } from './ui/separator'
 import PostSkeleton from './Middle/PostSkeleton'
+import { useToast } from '@/hooks/use-toast'
 
 type Props = {}
 
@@ -79,6 +80,7 @@ const ownPostRender = (props: Props) => {
 
     return (
         <div className='mt-8'>
+            <h1 className='text-2xl font-bold mb-4'>My Casting Calls</h1>
             {data?.pages.map((page) =>
                 page.data.map((post: PostData, index: number) => {
                     if (page.data.length == index + 1) {
@@ -103,6 +105,9 @@ const ownPostRender = (props: Props) => {
 export default ownPostRender
 
 const PostRenderData = ({ data }: { data: PostData }) => {
+
+    const { toast } = useToast()
+
     const deletePost = useMutation({
         mutationFn: async (postId: string) => {
             await axios.delete(`/api/deletepost?postId=${postId}`, {
@@ -110,10 +115,19 @@ const PostRenderData = ({ data }: { data: PostData }) => {
             });
         },
         onSuccess: () => {
+            toast({
+                title: 'Post Deleted',
+                description: 'Your post has been deleted successfully',
+            })
             window.location.reload()
         },
         onError: (error) => {
             console.error('Error deleting post:', error)
+            toast({
+                variant: 'destructive',
+                title: 'Error',
+                description: 'Error deleting post',
+            })
         }
     })
 

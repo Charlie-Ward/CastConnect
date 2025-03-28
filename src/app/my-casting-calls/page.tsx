@@ -14,7 +14,7 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
 
   const { data: Session, status } = useSession()
 
@@ -51,4 +51,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

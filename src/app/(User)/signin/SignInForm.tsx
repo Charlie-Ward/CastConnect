@@ -59,7 +59,7 @@ const SignInForm = (props: Props) => {
             toast({
                 description: "User Log In Successful"
             })
-            router.push('/')
+            router.push('/app')
         } catch (error) {
             console.log(error)
             if (error instanceof Error) {
