@@ -66,8 +66,7 @@ const NewPost = (props: Props) => {
                 description: 'Your post has been created successfully',
             })
             console.log(response)
-            setContent('')
-            router.push('/app')
+            router.refresh()
         } catch (error: any) {
             console.error('Error creating post:', error.response?.data || error)
             alert('Error creating post: ' + (error.response?.data?.message || error.message))
@@ -83,7 +82,7 @@ const NewPost = (props: Props) => {
     }
 
     return (
-        <div className='w-2/4 py-5 rounded-md mx-auto px-4'>
+        <div className='py-5 rounded-md mx-auto px-4'>
             <Card className='p-4'>
                 <div className='flex items-center space-x-5'>
                     {/* Maybe add image back in */}

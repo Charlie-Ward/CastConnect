@@ -8,6 +8,8 @@ import React from 'react'
 import NewPost from './NewPost'
 import { useSession } from 'next-auth/react'
 import { Card } from '../ui/card'
+import PostRender from './PostRender'
+import QuerryWrapper from '../QueryWrapper'
 
 type Props = {}
 
@@ -29,6 +31,9 @@ const MiddleComponent = (props: Props) => {
       {status === "authenticated" && (
         <NewPost />
       )}
+      <QuerryWrapper>
+        <PostRender />
+      </QuerryWrapper>
     </div>
   )
 }
