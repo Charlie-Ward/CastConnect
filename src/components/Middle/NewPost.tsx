@@ -27,6 +27,7 @@ import { Button } from '../ui/button'
 import ContentArea from '../Editor/ContentArea'
 import { url } from 'inspector'
 import { Plus, UploadCloud } from 'lucide-react'
+import axios from 'axios'
 
 type Props = {}
 
@@ -99,13 +100,27 @@ const NewPost = (props: Props) => {
         setFileUrls(updateUrls)
     }
 
-    const CreatePost = () => {
-        const formData = new FormData()
-        
-        if(content == "<p></p>") {
+    const CreatePost = async () => {
+        if(content == "<p></p>" || !content) {
             console.log("Post is not valid")
             alert('Post is not valid')
             return
+        }
+
+        const tags = (content ?? '').match(/#\w+/g) || []
+
+        try {
+            const response = await axios.post('/api/createpost', {
+                content,
+                typePost: 'POST',
+                tags
+            })
+            console.log(response)
+            alert('Post created successfully!')
+            setContent('')
+        } catch (error: any) {
+            console.error('Error creating post:', error.response?.data || error)
+            alert('Error creating post: ' + (error.response?.data?.message || error.message))
         }
     }
 
