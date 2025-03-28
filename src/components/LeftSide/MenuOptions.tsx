@@ -23,7 +23,7 @@ const MenuItem = ({icon, label, href}: MenuItemProps) => {
 const MenuOptions = (props: Props) => {
 
     const MenuItems = [
-        {icon: <Home />, label: 'Home', href: '/app'},
+        {icon: <Home />, label: 'Home', href: '/home'},
         {icon: <SquarePlus />, label: 'New Casting Call', href: '/new-casting-call'},
         {icon: <LayoutGrid />, label: 'My Casting Calls', href: '/my-casting-calls'},
     ]

@@ -19,7 +19,7 @@ export default function Home() {
                 Post a Casting Call
               </Button> */}
               <Button size="lg" variant="default">
-                <Link href='/app'>
+                <Link href='/home'>
                   Browse Opportunities
                 </Link>
               </Button>
@@ -52,7 +52,7 @@ export default function Home() {
               <li>• Track your submissions</li> */}
             </ul>
             <Button size="lg" variant="default" className="space-y-3 mt-4">
-              <Link href='/app'>
+              <Link href='/home'>
                 Visit the platform
               </Link>
             </Button>

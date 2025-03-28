@@ -5,7 +5,7 @@ import { Post, Image as ImageType, Video as VideoType, TypePost } from '@prisma/
 import axios from 'axios'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { useInView } from 'react-intersection-observer'
-import page from '@/app/app/page'
+import page from '@/app/home/page'
 import { Lasso } from 'lucide-react'
 import { fetchInternalImage } from 'next/dist/server/image-optimizer'
 import { Card } from '../ui/card'

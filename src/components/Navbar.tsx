@@ -45,7 +45,7 @@ const Navbar = (props: Props) => {
                     <HoverCard>
                         <HoverCardTrigger asChild>
                             <Button variant='outline' size='icon'>
-                                <Link href='/app'><DoorOpen /></Link>
+                                <Link href='/home'><DoorOpen /></Link>
                             </Button>
                         </HoverCardTrigger>
                         <HoverCardContent className='w-auto opacity-15 text-black'>

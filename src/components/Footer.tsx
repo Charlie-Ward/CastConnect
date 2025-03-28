@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
           <div>
             <h3 className="font-semibold mb-4">For Talent</h3>
             <ul className="space-y-2 text-gray-600">
-              <li><Link href="/app" className='text-decoration: hover:underline hover:text-blue-500'>Browse Roles</Link></li>
+              <li><Link href="/home" className='text-decoration: hover:underline hover:text-blue-500'>Browse Roles</Link></li>
             </ul>
           </div>
 
@@ -32,7 +32,7 @@ const Footer = (props: Props) => {
             <ul className="space-y-2 text-gray-600">
               <li><Link href="/signup" className='text-decoration: hover:underline hover:text-blue-500'>Create an Account</Link></li>
               <li><Link href="/signin" className='text-decoration: hover:underline hover:text-blue-500'>Sign In</Link></li>
-              <li><Link href="/app" className='text-decoration: hover:underline hover:text-blue-500'>Head to the Platform</Link></li>
+              <li><Link href="/home" className='text-decoration: hover:underline hover:text-blue-500'>Head to the Platform</Link></li>
             </ul>
           </div>
 

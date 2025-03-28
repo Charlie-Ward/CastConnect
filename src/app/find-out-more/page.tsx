@@ -19,9 +19,9 @@ const page = () => {
                 <section className="prose dark:prose-invert max-w-none">
                     <h2 className="text-2xl font-semibold">Project Overview</h2>
                     <p>
-                    CastConnect is a demonstration project developed as part of the OCR A-Level Computer Science coursework. 
-                    It serves as a practical application of modern web development technologies and frameworks, showcasing 
-                    full-stack development capabilities.
+                    CastConnect is a completed demonstration project developed as part of the OCR A-Level Computer Science coursework. 
+                    It showcases a practical application of modern web development technologies and frameworks, demonstrating 
+                    full-stack development capabilities and best practices.
                     </p>
                 </section>
 
@@ -44,6 +44,9 @@ const page = () => {
                         <li>Next-Auth - Authentication solution</li>
                         <li>React Hook Form - Form validation and handling</li>
                         <li>Zod - Schema validation</li>
+                        <li>Prisma - Database ORM</li>
+                        <li>Axios - HTTP client for API requests</li>
+                        <li>Framer Motion - Animation library</li>
                         </ul>
                     </div>
                     </div>
@@ -52,9 +55,9 @@ const page = () => {
                 <section className="prose dark:prose-invert max-w-none">
                     <h2 className="text-2xl font-semibold">Educational Purpose</h2>
                     <p>
-                    This project is designed and implemented solely for educational purposes as part of an A-Level 
+                    This project was designed and implemented solely for educational purposes as part of an A-Level 
                     qualification. While it demonstrates functional features and modern development practices, it is 
-                    not intended for production use. The codebase serves as a learning platform to understand concepts 
+                    not intended for production use. The codebase served as a learning platform to understand concepts 
                     like:
                     </p>
                     <ul className="list-disc pl-6">
@@ -63,7 +66,15 @@ const page = () => {
                     <li>User authentication and authorization</li>
                     <li>Responsive design principles</li>
                     <li>Database management</li>
+                    <li>Hot Module Replacement (HMR) and Webpack configuration</li>
                     </ul>
+                </section>
+                <section className="prose dark:prose-invert max-w-none">
+                    <h2 className="text-2xl font-semibold">Project Completion</h2>
+                    <p>
+                    The project has been successfully completed, meeting all the requirements of the OCR A-Level Computer Science coursework. 
+                    It serves as a comprehensive demonstration of the skills and technologies learned during the course.
+                    </p>
                 </section>
                 </div>
             </div>
