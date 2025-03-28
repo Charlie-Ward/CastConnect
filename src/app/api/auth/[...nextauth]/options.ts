@@ -8,6 +8,7 @@ import CredentialProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "@/app/prismadb"
 import bcrypt from "bcryptjs"
+import { NextResponse } from "next/server"
 
 export const options:NextAuthOptions = {
     adapter:PrismaAdapter(prisma),
@@ -18,27 +19,26 @@ export const options:NextAuthOptions = {
                 email:{},
                 password:{}
             },
-            async authorize(credentials: Record<"email" | "password", string> | undefined, req) {
+            async authorize(credentials: Record<"email" | "password", string> | undefined, req) { //Called in the submit function on the signIn page
                 if(!credentials?.email || !credentials?.password){
-                    return null
+                    throw new Error("Data provided is not valid")
                 }
 
-                const user = await prisma.user.findUnique({
+                const user = await prisma.user.findUnique({ //Assign the user associated with the email to user
                     where:{
                         email: credentials.email
                     }
                 })
 
-                if(!user || !user.password){
-                    return null
+                if(!user || !user.password){ //If user doesn't exist or if it doesn't have a password
+                    throw new Error("User not found. Sign Up instead?")
                 }
 
                 const passwordcompare = await bcrypt.compare(credentials.password, user.password)
 
                 if(!passwordcompare){
-                    return null
+                    throw new Error("Password is incorrect. Do you need to reset it?")
                 }
-
                 return user
             },
         })

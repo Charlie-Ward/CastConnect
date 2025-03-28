@@ -29,6 +29,8 @@ type Props = {}
 const SignUpForm = (props: Props) => {
     const { toast } = useToast()
     const router = useRouter()
+
+    // Use the SignUpSchema for this form
     const form = useForm<z.infer<typeof SignUpSchema>>({
         resolver: zodResolver(SignUpSchema),
         defaultValues: {
@@ -36,8 +38,10 @@ const SignUpForm = (props: Props) => {
         },
     })
     
+
     async function onSubmit(values: z.infer<typeof SignUpSchema>) {
         try {
+            //Try to submit the form to the api with these values
             const response = await axios.post('/api/signup', {
                 username:values.username,
                 email:values.email,
@@ -62,6 +66,7 @@ const SignUpForm = (props: Props) => {
             <Card className='p-5 max-w-[600px] mx-auto'>
                 <CardHeader className='text-2xl font-semibold text-center'>Sign Up</CardHeader>
                 <Form {...form}>
+                    {/* Creating the form */}
                     <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
                         <FormField
                             control={form.control}
