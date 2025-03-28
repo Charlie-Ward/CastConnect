@@ -2,7 +2,7 @@
 //Copyright (C) 2025  Charlie Ward GPL v3
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
-import type { NextAuthOptions } from "next-auth"
+import type { NextAuthOptions, Session } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import CredentialProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
@@ -10,7 +10,18 @@ import prisma from "@/app/prismadb"
 import bcrypt from "bcryptjs"
 import { NextResponse } from "next/server"
 
-export const options:NextAuthOptions = {
+declare module "next-auth" {
+    interface Session {
+        user: {
+            id: string;
+            name?: string | null;
+            email?: string | null;
+            image?: string | null;
+        };
+    }
+}
+
+export const options: NextAuthOptions = {
     adapter:PrismaAdapter(prisma),
     providers:[
         CredentialProvider({
@@ -49,13 +60,21 @@ export const options:NextAuthOptions = {
     },
 
     callbacks:{
-        async jwt({token, user, session}){
-            console.log("JWT Callback", {token, user, session})
+        async jwt({token, user}) {
+            // Include the user ID in the JWT token
+            if (user) {
+                token.id = user.id;
+            }
+            console.log("JWT Callback", {token, user})
             return token
         },
-        async session({session, user, token}){
-            console.log("Session Callback", {session, user, token})
-            return session
+        async session({session, token}) {
+            // Include the user ID in the session object from the token
+            if (session.user && token.id) {
+                session.user.id = token.id as string;
+            }
+            console.log("Session Callback", {session, token})
+            return session;
         }
     },
     session:{

@@ -1,4 +1,4 @@
-import { Home, LayoutGrid } from 'lucide-react'
+import { Home, LayoutGrid, SquarePlus } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { Separator } from '../ui/separator'
@@ -24,16 +24,17 @@ const MenuOptions = (props: Props) => {
 
     const MenuItems = [
         {icon: <Home />, label: 'Home', href: '/app'},
-        // {icon: <LayoutGrid />, label: 'Image Gallery', href: '/image-gallery'},
+        {icon: <SquarePlus />, label: 'New Casting Call', href: '/new-casting-call'},
+        {icon: <LayoutGrid />, label: 'My Casting Calls', href: '/my-casting-calls'},
     ]
 
   return (
     <div className='lg:w-1/4 md:1/5 p-5 max-md:hidden my-5'>
         <div className='flex flex-col'>
-            {/* {MenuItems.map((item, index) => (
+            {MenuItems.map((item, index) => (
                 <MenuItem key={index} icon={item.icon} label={item.label} href={item.href} />
             ))}
-            <Separator className='my-4' /> */}
+            <Separator className='my-4' />
         </div>
     </div>
   )

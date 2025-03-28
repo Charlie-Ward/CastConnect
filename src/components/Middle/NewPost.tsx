@@ -89,13 +89,13 @@ const NewPost = (props: Props) => {
                     {/* <Image src={Session?.user?.image ? Session.user?.image : '/image4.jpg'} width={40} height={40} alt='Image' className='rounded-full h-[40px] object-cover object-top' /> */}
                     <Dialog>
                         <DialogTrigger className='w-full'>
-                            <Button variant="default" size="lg">Make A Post</Button>
+                            <Button variant="default" size="lg">Make A New Casting Call</Button>
                             {/* <p>Make a post</p> */}
                         </DialogTrigger>
                         <DialogContent className='max-w-[800px] max-h-[600px] min-h-[200px] overflow-auto'>
                             <DialogHeader>
                                 <DialogTitle className='my-2 text-xl'>
-                                    Make Your Post
+                                    Make A New Casting Call
                                 </DialogTitle>
                                 <DialogDescription>
                                     <ContentArea content={content || ''} setContent={setContent} />

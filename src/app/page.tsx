@@ -81,6 +81,13 @@ export default function Home() {
             <Button variant="secondary"><Link href='/signin'>Log In</Link></Button>
           </div>
         </div> */}
+        <div className="mt-16 text-center">
+            <Button size="lg" variant="default" className="py-4 px-8 text-lg">
+            <Link href='/about'>
+              Find Out More
+            </Link>
+            </Button>
+        </div>
       </div>
     </div>
   );
