@@ -11,7 +11,7 @@ const page = () => {
     <div className='max-w-[1300px] mx-auto'>
       <div className='flex w-full'>
         <MenuOptions />
-        <div className='h-[90vh] overflow-y-auto lg:w-2/4 md:w-3/5 py-5 mx-4 px-4'>
+        <div className='h-[90vh] overflow-y-auto lg:w-3/4 md:w-3/5 py-5 mx-4 px-4'>
           <MiddleComponent />
         </div>
       </div>
