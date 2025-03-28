@@ -9,22 +9,22 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <div className="max-w-[1280px] mx-auto py-8 px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Welcome to CastConnect</h1>
-          <p className="text-xl text-gray-600 mb-8">The premier platform connecting casting directors with talent</p>
-          <div className="flex justify-center gap-4">
-            {/* <Button size="lg" variant="default">
-              Post a Casting Call
-            </Button> */}
-            <Button size="lg" variant="default">
-              <Link href='/app'>
-                Browse Opportunities
-              </Link>
-            </Button>
+        {/* Hero Section */}
+        <div className="max-w-[1280px] mx-auto py-8 px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">Welcome to CastConnect</h1>
+            <p className="text-xl text-gray-600 mb-8">The premier platform connecting casting directors with talent</p>
+            <div className="flex justify-center gap-4">
+              {/* <Button size="lg" variant="default">
+                Post a Casting Call
+              </Button> */}
+              <Button size="lg" variant="default">
+                <Link href='/app'>
+                  Browse Opportunities
+                </Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <div className="border rounded-lg p-6 shadow-sm">
@@ -74,13 +74,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <h2 className="text-2xl font-semibold mb-6">Ready to get started?</h2>
           <div className="flex justify-center gap-4">
             <Button variant="default"><Link href='/signup'>Sign Up Now</Link></Button>
             <Button variant="secondary"><Link href='/signin'>Log In</Link></Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
