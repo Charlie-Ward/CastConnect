@@ -49,13 +49,16 @@ const SignUpForm = (props: Props) => {
                 confirmpassword:values.confirmpassword
             })
             toast({
-                description: "User Registered Successfully"
+                description: "User Registered Successfully. Manual Verification Required please wait for an email from CastConnect",
+                title: "Success",
             })
             router.push('/signin')
             console.log(response)
         } catch (error) {
             console.log(error)
             toast({
+                variant: "destructive",
+                title: "Error",
                 description: "Something went wrong"
             })
         }

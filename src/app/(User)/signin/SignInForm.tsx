@@ -64,6 +64,8 @@ const SignInForm = (props: Props) => {
             console.log(error)
             if (error instanceof Error) {
                 toast({
+                    variant: "destructive",
+                    title: "Error",
                     description: error.message || "Something went wrong"
                 })
             } else {

@@ -45,6 +45,11 @@ export const options: NextAuthOptions = {
                     throw new Error("User not found. Sign Up instead?")
                 }
 
+                if(!user.verified_user){
+                    throw new Error("Account not verified. Accounts require manual verification by a memeber of the CastConnect team.")
+                }
+
+
                 const passwordcompare = await bcrypt.compare(credentials.password, user.password)
 
                 if(!passwordcompare){
