@@ -12,16 +12,17 @@ type Props = {}
 
 const Page = (props: Props) => {
 
-    const {data: Session, status} = useSession()
+    const {data: Session, status} = useSession() // Able to see the session details from next-auth
 
   return (
     <div className='max-w-[1300px] mx-auto'>
       <div className='flex w-full'>
-        <MenuOptions />
+        <MenuOptions /> {/* Left side menu options */}
         <div className='h-[90vh] overflow-y-auto lg:w-3/4 md:w-3/5 py-5 mx-4 px-4'>
-          {status === 'unauthenticated' && (
+          {status === 'unauthenticated' && ( // If user is not logged in
             <div className='w-2/4 py-5 rounded-md mx-auto px-4'>
                 <Card className='p-6 text-center'>
+                  {/* Provide user feedback that they should login */}
                   <div className='mb-4 text-lg font-semibold'>
                     Login To Write A Casting Call
                   </div>
@@ -36,7 +37,7 @@ const Page = (props: Props) => {
                 </Card>
             </div>
           )}
-          {status === "authenticated" && (
+          {status === "authenticated" && ( // If user is logged in
             <NewPost />
           )}
         </div>
