@@ -21,26 +21,6 @@ const MiddleComponent = (props: Props) => {
 
   return (
     <div>
-      {/* {status === 'unauthenticated' && (
-        <div className='w-2/4 py-5 rounded-md mx-auto px-4'>
-            <Card className='p-6 text-center'>
-            <div className='mb-4 text-lg font-semibold'>
-              Login To Write A Post
-            </div>
-            <div className="flex justify-center gap-4">
-              <Button variant="default" className="w-32">
-              <Link href='/signin'>Log In</Link>
-              </Button>
-              <Button variant="secondary" className="w-32">
-              <Link href='/signup'>Sign Up Now</Link>
-              </Button>
-            </div>
-            </Card>
-        </div>
-      )}
-      {status === "authenticated" && (
-        <NewPost />
-      )} */}
       <QuerryWrapper>
         <PostRender />
       </QuerryWrapper>
