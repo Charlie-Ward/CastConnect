@@ -1,3 +1,7 @@
+//PostSkeleton.tsx
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
+
 import React from 'react'
 import { Skeleton } from '../ui/skeleton'
 import { Card } from '../ui/card'

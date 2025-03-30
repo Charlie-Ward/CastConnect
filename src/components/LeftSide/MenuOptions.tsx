@@ -1,3 +1,7 @@
+//MenuOptions.tsx
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
+
 import { Home, LayoutGrid, SquarePlus } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
