@@ -9,22 +9,20 @@ import { Post, Image as ImageType, Video as VideoType, TypePost } from '@prisma/
 import axios from 'axios'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { useInView } from 'react-intersection-observer'
-import page from '@/app/home/page'
-import { Lasso } from 'lucide-react'
-import { fetchInternalImage } from 'next/dist/server/image-optimizer'
 import { Card } from '../ui/card'
-import Image from 'next/image'
 import { Separator } from '../ui/separator'
 import PostSkeleton from './PostSkeleton'
 
 type Props = {}
 
+//Define types for post data
 type PostQueryParams = {
     take?: number
     lastCursor?: string
     typePost: TypePost
 }
 
+//Extend Post type to include related data
 export interface PostData extends Post{
     images: ImageType[]
     videos: VideoType[]
@@ -34,8 +32,10 @@ export interface PostData extends Post{
 }
 
 const PostRender = (props: Props) => {
-    
+    // Setup infinite scroll
     const {ref, inView} = useInView()
+
+    //API call
     const AllPost = async ({take, lastCursor, typePost}: PostQueryParams) => {
         const response = await axios.get('/api/getPost', {
             params:{
@@ -47,6 +47,7 @@ const PostRender = (props: Props) => {
         return response?.data
     }
 
+    // Setup the infinite query
     const {
         data,
         error,
@@ -59,17 +60,19 @@ const PostRender = (props: Props) => {
         queryFn: ({pageParam = ""}) => AllPost({take:5, lastCursor: pageParam, typePost: TypePost.POST}),
         queryKey:['posts'],
         getNextPageParam: (lastPage) => {
-            return lastPage?.metaData.lastCursor
+            return lastPage?.metaData.lastCursor //Get cursor for next page
         },
         initialPageParam: undefined
     })
 
+    // Effect to load more posts when user scrolls to bottom
     useEffect(() => {
         if(inView && hasNextPage) {
             fetchNextPage()
         }
     }, [hasNextPage, inView, fetchNextPage])
 
+    //Error handling
     if(error as any) {
         return (
             <div className='mt-10'>
@@ -78,6 +81,7 @@ const PostRender = (props: Props) => {
         )
     }
 
+    //When posts loading
     if(isLoading) {
         return (
             <PostSkeleton />
@@ -86,9 +90,11 @@ const PostRender = (props: Props) => {
 
     return (
         <div className='mt-8'>
+            {/* Map through pages and posts to render them */}
             {data?.pages.map((page) => 
                 page.data.map((post: PostData, index: number) => {
-                    if(page.data.length == index + 1) {
+                    //Add ref to last post for the infinite scroll
+                    if(page.data.length == index + 1) { //If last post add the invisible reference point to be trigger the next page load
                         return(
                             <div key={index} ref={ref}>
                                 <PostRenderData data={post}/>
@@ -103,13 +109,13 @@ const PostRender = (props: Props) => {
                     }
                 })
             )}
-
         </div>
     )
 }
 
 export default PostRender
 
+//Component to render individual post data
 const PostRenderData = ({data}:{data:PostData}) => {
     return (
         <Card className='p-4 my-6'>

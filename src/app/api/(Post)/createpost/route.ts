@@ -1,3 +1,7 @@
+//route.ts
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
+
 import prisma from '@/app/prismadb';
 import { NextResponse, NextRequest } from 'next/server';
 import { getServerSession } from 'next-auth';

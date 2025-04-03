@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
-// filepath: c:/Users/joand/Documents/CastConnect/CastConnect/src/app/about/page.tsx
-//about/page.tsx
+//page.tsx
 //Copyright (C) 2025  Charlie Ward GPL v3
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function About() {
     return (

@@ -3,7 +3,6 @@
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {

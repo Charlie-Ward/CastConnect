@@ -46,7 +46,7 @@ export const options: NextAuthOptions = {
                 }
 
                 if(!user.verified_user){
-                    throw new Error("Account not verified. Accounts require manual verification by a memeber of the CastConnect team.")
+                    throw new Error("Account not verified. Accounts require manual verification by a member of the CastConnect team.")
                 }
 
 

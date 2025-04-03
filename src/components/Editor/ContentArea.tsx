@@ -2,7 +2,7 @@
 //Copyright (C) 2025  Charlie Ward GPL v3
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
-import React, { use } from 'react'
+import React from 'react'
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from "@tiptap/starter-kit"
 import Bold from '@tiptap/extension-bold'

@@ -5,13 +5,9 @@
 'use client'
 
 import React from 'react'
-import NewPost from './NewPost'
 import { useSession } from 'next-auth/react'
-import { Card } from '../ui/card'
 import PostRender from './PostRender'
 import QuerryWrapper from '../QueryWrapper'
-import { Button } from '../ui/button'
-import Link from 'next/link'
 
 type Props = {}
  

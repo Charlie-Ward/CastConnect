@@ -1,9 +1,11 @@
+//route.ts
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
+
 import prisma from '@/app/prismadb';
 import { NextResponse, NextRequest } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { options } from '@/app/api/auth/[...nextauth]/options';
-
-// filepath: c:/Users/joand/Documents/CastConnect/CastConnect/src/app/api/(Post)/deletepost/route.ts
 
 export async function DELETE(request: NextRequest) {
     try {

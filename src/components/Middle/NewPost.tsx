@@ -12,51 +12,41 @@ import {
     DialogTitle,
     DialogTrigger
 } from "@/components/ui/dialog"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious
-} from "@/components/ui/carousel"
 import { Card } from '../ui/card'
-import Image from 'next/image'
-import { useSession } from "next-auth/react"
-import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import ContentArea from '../Editor/ContentArea'
-import { url } from 'inspector'
-import { Loader2, Plus, UploadCloud } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import axios from 'axios'
 import { useToast } from '@/hooks/use-toast'
 import { useRouter } from 'next/navigation'
-import { set } from 'zod'
 
 type Props = {}
 
 const NewPost = (props: Props) => {
-    const {data: Session} = useSession()
     const [content, setContent] = useState<string>()
-    const [files, setFiles] = useState<File[]>([])
-    const [fileUrls, setFileUrls] = useState<string[]>([])
     const [isLoading, setLoading] = useState<boolean>(false)
     const { toast } = useToast()
     const router = useRouter()
 
     const CreatePost = async () => {
 
-        setLoading(true)
+        setLoading(true) // Change setLoading to true to change the submit button to a loading sign
 
-        if(content == "<p></p>" || !content) {
+        if(content == "<p></p>" || !content) { //Does post contain any text
             console.log("Post is not valid")
-            alert('Post is not valid')
+            toast({ //If not valid tell the user
+                variant: 'destructive',
+                title: 'Error',
+                description: 'Post has no content'
+            })
+            setLoading(false)
             return
         }
 
-        const tags = (content ?? '').match(/#\w+/g) || []
+        const tags = (content ?? '').match(/#\w+/g) || [] //Pull out all text that begins with #
 
         try {
-            const response = await axios.post('/api/createpost', {
+            const response = await axios.post('/api/createpost', { //Try to call API with all the data it requires
                 content,
                 typePost: 'POST',
                 tags
@@ -66,8 +56,8 @@ const NewPost = (props: Props) => {
                 description: 'Your post has been created successfully',
             })
             console.log(response)
-            router.push('/home')
-        } catch (error: any) {
+            router.push('/home') //Send the user back to the app home
+        } catch (error: any) { //Error catching
             console.error('Error creating post:', error.response?.data || error)
             alert('Error creating post: ' + (error.response?.data?.message || error.message))
 
@@ -78,7 +68,7 @@ const NewPost = (props: Props) => {
             })
         }
 
-        setLoading(false)
+        setLoading(false) // Change submit button back
     }
 
     return (

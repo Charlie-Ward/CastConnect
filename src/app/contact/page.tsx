@@ -1,6 +1,8 @@
-import React from "react";
+//page.tsx
+//Copyright (C) 2025  Charlie Ward GPL v3
+//Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
-// filepath: /c:/Users/joand/Documents/CastConnect/CastConnect/src/app/contact/page.tsx
+import React from "react";
 
 const ContactPage = () => {
     return (

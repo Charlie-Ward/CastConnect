@@ -23,7 +23,7 @@ const Page = () => {
       <div className='flex w-full'>
         <MenuOptions />
         <div className='h-[90vh] overflow-y-auto lg:w-3/4 md:w-3/5 py-5 mx-4 px-4'>
-          {status === 'unauthenticated' && (
+          {status === 'unauthenticated' && ( //If user is not logged in
             <div className='w-2/4 py-5 rounded-md mx-auto px-4'>
             <Card className='p-6 text-center'>
               <div className='mb-4 text-lg font-semibold'>
@@ -40,7 +40,7 @@ const Page = () => {
             </Card>
         </div>
           )}
-          {status === "authenticated" && (
+          {status === "authenticated" && ( //If user is logged in 
             <QueryWrapper>
               <OwnPostRender />
             </QueryWrapper>

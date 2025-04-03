@@ -4,7 +4,7 @@
 
 'use client'
 import React from 'react'
-import { SignInSchema, SignUpSchema } from '@/ZodSchema/UserSchema'
+import { SignInSchema } from '@/ZodSchema/UserSchema'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -20,7 +19,6 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Card, CardHeader } from '@/components/ui/card'
-import axios from 'axios'
 import { useToast } from '@/hooks/use-toast'
 import { useSession, signIn, signOut} from 'next-auth/react';
 import { useRouter } from 'next/navigation'
