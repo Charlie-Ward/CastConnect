@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CastConnect",
-  description: "A platfrom to connect casting directors and actors"
+  description: "A platform to connect casting directors and actors"
 };
 
 export default function RootLayout({
