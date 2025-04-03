@@ -3,12 +3,10 @@
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
 import type { NextAuthOptions, Session } from "next-auth"
-import GoogleProvider from "next-auth/providers/google"
 import CredentialProvider from "next-auth/providers/credentials"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import prisma from "@/app/prismadb"
 import bcrypt from "bcryptjs"
-import { NextResponse } from "next/server"
 
 declare module "next-auth" {
     interface Session {

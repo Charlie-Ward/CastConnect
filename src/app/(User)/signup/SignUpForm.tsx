@@ -3,7 +3,7 @@
 //Full License @ https://github.com/Charlie-Ward/CastConnect/blob/main/LICENSE
 
 'use client'
-import React, { use } from 'react'
+import React from 'react'
 import { SignUpSchema } from '@/ZodSchema/UserSchema'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"

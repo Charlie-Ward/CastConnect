@@ -9,7 +9,6 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import NewPost from '@/components/Middle/NewPost'
-import { Menu } from 'lucide-react'
 import MenuOptions from '@/components/LeftSide/MenuOptions'
 
 type Props = {}

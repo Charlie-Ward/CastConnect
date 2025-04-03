@@ -5,10 +5,7 @@
 import prisma from "@/app/prismadb"
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
-import { randomUUID } from "crypto"
 import { z } from "zod"
-import { SignUpSchema } from "@/ZodSchema/UserSchema"
-import nodemailer from "nodemailer"
 
 const ForgotPasswordSchema = z.object({
     email: z.string().email().refine((value) => !!value, {

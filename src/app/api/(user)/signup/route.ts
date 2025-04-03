@@ -5,10 +5,8 @@
 import prisma from "@/app/prismadb"
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
-import { randomUUID } from "crypto"
 import { z } from "zod"
 import { SignUpSchema } from "@/ZodSchema/UserSchema"
-import nodemailer from "nodemailer"
 
 // Get the schema that the form used
 type SignUpSchemaT = z.infer<typeof SignUpSchema>
@@ -40,15 +38,6 @@ export async function POST(request: Request) {
 
     //Hash the password
     const hashedPassword = await bcrypt.hash(body.password, 14) // Was 10 updated to be more secure
-
-    //For a verification token system WIP
-    // var transport = nodemailer.createTransport({
-    //     service: 'gmail',
-    //     auth:{
-    //         user:process.env.USER_MAIL,
-    //         pass:process.env.USER_PASSWORD
-    //     }
-    // })
 
     //Try to create a new entry in the model of user with the data from the original call of the API
     try{
