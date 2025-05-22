@@ -4,6 +4,8 @@
 
 # Casting Call Platform
 
+[![NodeJS with Webpack](https://github.com/Charlie-Ward/CastConnect/actions/workflows/webpack.yml/badge.svg)](https://github.com/Charlie-Ward/CastConnect/actions/workflows/webpack.yml)
+
 A web application built with Next.js that connects actors and casting directors. This platform allows casting directors to post casting calls and actors to submit auditions, streamlining the casting process.
 
 ## Features
